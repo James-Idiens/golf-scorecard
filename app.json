@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "name": "golf-scorecard-mobile",
+    "slug": "golf-scorecard-mobile"
+  }
+}
