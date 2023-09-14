@@ -61,6 +61,18 @@ const commonStyles = StyleSheet.create({
     marginBottom: 20,
     paddingVertical: 15,
   },
+  homeButton: {
+    position: 'absolute',
+    top: 20,
+    left: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 40,
+    height: 40,
+    borderRadius: 20,
+    backgroundColor: 'black',
+    zIndex: 999, // Ensures it's above other elements
+  },
 })
 
 export default commonStyles

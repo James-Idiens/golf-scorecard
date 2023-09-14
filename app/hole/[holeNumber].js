@@ -3,6 +3,7 @@ import { Link, useLocalSearchParams } from 'expo-router'
 import { useHoleScore } from '../../hooks/GetScore'
 import commonStyles from './styles'
 import { holeDetails } from '../../utilities/holeDetails'
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
 
 export default function Hole() {
   const { holeNumber } = useLocalSearchParams()
@@ -14,6 +15,11 @@ export default function Hole() {
       <View style={commonStyles.header}>
         <Text style={commonStyles.headerText}>{holeInfo.name}</Text>
       </View>
+      <Link href="/" asChild>
+        <Pressable style={commonStyles.homeButton}>
+          <FontAwesome name="home" size={30} color="white" />
+        </Pressable>
+      </Link>
       <View style={commonStyles.description}>
         <Text style={commonStyles.descriptionText}>Par: {holeInfo.par}</Text>
         <Text style={commonStyles.descriptionText}>Metres: {holeInfo.meters}</Text>

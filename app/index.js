@@ -4,20 +4,35 @@ import { Link } from 'expo-router'
 export default function Home() {
   return (
     <View style={styles.container}>
-      <Link href="/hole/1" asChild>
-        <Pressable style={styles.button}>
-          <Text style={styles.text}>Start Game</Text>
-        </Pressable>
-      </Link>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>Rawhiti Scorecard</Text>
+      </View>
+      <View style={styles.buttonContainer}>
+        <Link href="/hole/1" asChild>
+          <Pressable style={styles.button}>
+            <Text style={styles.text}>Start Game</Text>
+          </Pressable>
+        </Link>
+      </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    position: 'absolute',
-    bottom: 20,
-    right: 20,
+    flex: 1,
+    justifyContent: 'space-between',
+    padding: 20,
+  },
+  header: {
+    marginBottom: 10,
+  },
+  headerText: {
+    fontSize: 28,
+    fontWeight: 'bold',
+  },
+  buttonContainer: {
+    alignItems: 'flex-end',
   },
   button: {
     alignItems: 'center',
