@@ -16,8 +16,8 @@ export default function Home() {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    bottom: 20, // Adjust the distance from the bottom as needed
-    right: 20, // Adjust the distance from the right as needed
+    bottom: 20,
+    right: 20,
   },
   button: {
     alignItems: 'center',
