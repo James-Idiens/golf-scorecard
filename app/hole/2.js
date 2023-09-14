@@ -3,15 +3,15 @@ import { View, Text, TextInput, Button } from 'react-native'
 import { Link } from 'expo-router'
 import { useHoleScore } from '../../hooks/GetScore'
 
-export default function Hole1() {
-  const { score, setScore, saveUserScore } = useHoleScore(1)
+export default function Hole2() {
+  const { score, setScore, saveUserScore } = useHoleScore(2)
 
   return (
     <View>
-      <Text>Hole 1</Text>
+      <Text>Hole 2</Text>
       <Text>Par: 4</Text>
-      <Text>Metres: 286</Text>
-      <Text>Stroke Index: 14</Text>
+      <Text>Metres: 338</Text>
+      <Text>Stroke Index: 5</Text>
       <TextInput
         placeholder="Score"
         value={score}
@@ -19,8 +19,10 @@ export default function Hole1() {
         keyboardType="numeric"
       />
       <Button label="Save Score" onPress={saveUserScore} />
-      <Button label="Previous Hole" disabled={true} />{' '}
-      <Link href="/hole/2">
+      <Link href="/hole/1">
+        <Button label="Previous Hole" />
+      </Link>
+      <Link href="/hole/3">
         <Button label="Next Hole" />
       </Link>
     </View>
